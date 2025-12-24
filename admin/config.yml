@@ -1,0 +1,62 @@
+
+backend:
+  name: git-gateway
+  branch: main # Change to master if your default branch is master
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://ultimaworks.github.io"
+display_url: "https://ultimaworks.github.io"
+logo_url: "https://github.com/UltimaWorks.png"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "uo_art"
+    label: "UO Art Releases"
+    folder: "_uo_art"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "release"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Preview Image", name: "image", widget: "image"}
+      - {label: "Download Link", name: "download_url", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown"}
+
+  - name: "python_scripts"
+    label: "Python Scripts"
+    folder: "_python_scripts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "release"}
+      - {label: "Script Name", name: "title", widget: "string"}
+      - {label: "Version", name: "version", widget: "string", default: "1.0.0"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Repository/Gist URL", name: "repo_url", widget: "string"}
+      - {label: "Documentation", name: "body", widget: "markdown"}
+
+  - name: "server_scripts"
+    label: "Server Scripts"
+    folder: "_server_scripts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "release"}
+      - {label: "Script Name", name: "title", widget: "string"}
+      - {label: "Platform", name: "platform", widget: "select", options: ["ServUO", "RunUO", "ModernUO", "Sphere"]}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Download/Repo URL", name: "repo_url", widget: "string"}
+      - {label: "Details", name: "body", widget: "markdown"}

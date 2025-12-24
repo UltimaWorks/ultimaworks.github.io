@@ -1,0 +1,32 @@
+
+title: UltimaWorks Studio
+email: jbob@ultimaworks.com
+description: >-
+  UO Art Releases, Python Scripts, Server Scripts, and Blog Posts.
+baseurl: ""
+url: "https://ultimaworks.github.io"
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Define Custom Collections
+collections:
+  uo_art:
+    output: true
+    permalink: /uo-art/:path/
+  python_scripts:
+    output: true
+    permalink: /python/:path/
+  server_scripts:
+    output: true
+    permalink: /server/:path/
+
+# Navigation Settings
+header_pages:
+  - index.md
+  - uo_art.md
+  - python.md
+  - server.md
+  - about.md
