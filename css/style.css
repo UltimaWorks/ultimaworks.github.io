@@ -1,0 +1,117 @@
+/* Core Styling */
+:root {
+    --uo-gold: #b39b5d;
+    --uo-dark-stone: #1a1a1a;
+    --uo-ink: #2a1a0a;
+    --parchment: #f4e4bc;
+}
+
+body.uo-body {
+    background-color: #000;
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Spectral', serif;
+    color: var(--uo-ink);
+    display: flex;
+    justify-content: center;
+}
+
+/* The "Gump" Container */
+.stone-frame {
+    background: #333; /* Replace with a stone texture URL if available */
+    border: 12px ridge #555;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    max-width: 900px;
+    padding: 15px;
+}
+
+.parchment-scroll {
+    background-color: var(--parchment);
+    background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
+    border: 2px solid #854c1d;
+    padding: 40px;
+    position: relative;
+    min-height: 80vh;
+}
+
+/* Typography */
+.uo-title {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 3.5rem;
+    color: var(--uo-ink);
+    margin: 0;
+    text-shadow: 1px 1px 0px var(--uo-gold);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.logo-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logo-tm {
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+.uo-subtitle {
+    text-align: center;
+    font-style: italic;
+    color: #5d4037;
+    margin-bottom: 30px;
+}
+
+/* Navigation Buttons (UO Gump Style) */
+.uo-gump-nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    border-bottom: 2px solid var(--uo-gold);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.gump-btn {
+    background: #4a3728;
+    color: var(--uo-gold);
+    padding: 8px 18px;
+    text-decoration: none;
+    font-family: 'MedievalSharp', cursive;
+    border: 2px outset var(--uo-gold);
+    transition: all 0.2s;
+}
+
+.gump-btn:hover, .gump-btn.active {
+    background: var(--uo-gold);
+    color: #000;
+    border-style: inset;
+}
+
+/* Content Blocks */
+.section-divider {
+    border-bottom: 1px double #854c1d;
+    padding-bottom: 10px;
+    font-family: 'MedievalSharp', cursive;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.uo-card {
+    border: 1px solid #d4c4a8;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.uo-footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
