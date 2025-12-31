@@ -1,1 +1,79 @@
-<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Art Releases | UltimaWorks Studio</title>\n    <link href=\"https://fonts.googleapis.com/css2?family=MedievalSharp&family=Spectral:ital,wght@0,400;0,700;1,400&display=swap\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"css/style.css\">\n</head>\n<body>\n    <div class=\"stone-border\">\n        <div class=\"parchment-container\">\n            <header>\n                <h1 class=\"uo-title\">Art Releases</h1>\n                <nav class=\"uo-nav\">\n                    <a href=\"index.html\" class=\"uo-btn\">Home</a>\n                    <a href=\"art.html\" class=\"uo-btn active\">Art Releases</a>\n                    <a href=\"scripts.html\" class=\"uo-btn\">Scripts & Python</a>\n                </nav>\n            </header>\n            <main>\n                <ul class=\"release-list\">\n                    <li><strong>Classic Map Overlays:</strong> HD Stone textures for floor tiles.</li>\n                    <li><strong>Gump Overhauls:</strong> Transparent paperdolls and gothic container gumps.</li>\n                    <li><strong>Custom Statics:</strong> New forge and anvil sprites for smithy expansions.</li>\n                </ul>\n            </main>\n        </div>\n    </div>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Releases | UltimaWorksStudio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Spectral:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="gump-container">
+        <div class="parchment-surface">
+            <header>
+                <!-- Using your uploaded logo -->
+                <img src="assets/UltimaWorks.png"
+                    alt="UltimaWorks Logo" class="main-logo" 
+                    onerror="this.style.display='none';
+                    this.nextElementSibling.style.display='block';">
+                <h1 class="uo-title">
+                    UltimaWorks 
+                </h1>
+
+                <p class="uo-subtitle">Art & Assets for the Modern Client</p>
+
+                <nav class="uo-nav">
+                    <a href="index.html" class="gump-btn">Home</a>
+                    <a href="art.html" class="gump-btn active">Art Releases</a>
+                    <a href="scripts.html" class="gump-btn">Scripts & Python</a>
+                    <a href="https://github.com/UltimaWorks" class="gump-btn">GitHub</a>
+                </nav>
+            </header>
+
+            <main>
+                <section class="content-block">
+                    <h2>Custom Art Collections</h2>
+
+                    <div class="release-list">
+                        <!-- Item 1 -->
+                        <div class="release-item">
+                            <span class="tag">Textures</span>
+                            <h3>Classic Map Overlays</h3>
+                            <p>High-definition stone and masonry textures designed to replace aging floor tiles.
+                                Optimized for the 2D client with proper transitions.</p>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="release-item">
+                            <span class="tag">Interface</span>
+                            <h3>Gump Overhauls</h3>
+                            <p>Gothic-styled container gumps and transparent paperdoll overlays for a cleaner, more
+                                immersive UI.</p>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="release-item">
+                            <span class="tag">Statics</span>
+                            <h3>Custom Forge & Anvils</h3>
+                            <p>New isometric sprites for crafting stations, including animated heat effects for master
+                                smithy expansions.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <div class="divider-icon">✦ ✧ ✦</div>
+                <p>&copy; 2025 UltimaWorks Studio - Created by JBob. All Britannia rights reserved.</p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
