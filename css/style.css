@@ -24,14 +24,15 @@ body {
     position: relative;
     max-width: 900px;
     width: 100%;
-    background: var(--stone-border);
+    background-color: var(--stone-border);
+    background-image: url("https://www.transparenttextures.com/patterns/rocky-wall.png");
     border: 8px ridge #666;
-    box-shadow: 0 0 50px rgba(0,0,0,1);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 1);
     padding: 12px;
     margin-top: 20px;
 }
 
-/* The Parchment Background */
+/* The Parchment Surface Inside the Gump */
 .parchment-surface {
     background-color: var(--parchment);
     background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
@@ -49,12 +50,15 @@ header {
 }
 
 .main-logo {
-    max-width: 100%;
+    src: "assets/ultimaworks.png";
+}
+img.main-logo {
+    max-width: 75px;
     height: auto;
     border-bottom: 2px solid var(--uo-gold);
     padding-bottom: 20px;
     margin-bottom: 10px;
-    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
 }
 
 .uo-subtitle {
@@ -87,13 +91,13 @@ nav.uo-nav {
     text-transform: uppercase;
     transition: all 0.1s ease;
     cursor: pointer;
-    box-shadow: 0 4px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4);
 }
 
 .gump-btn:hover {
     color: var(--uo-gold-bright);
     transform: translateY(-1px);
-    box-shadow: 0 6px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4);
 }
 
 .gump-btn:active {
@@ -140,7 +144,7 @@ nav.uo-nav {
     padding: 20px;
     text-align: center;
     transition: transform 0.2s;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .feature-card:hover {
@@ -162,13 +166,68 @@ nav.uo-nav {
     color: #444;
 }
 
+.content-block {
+    margin-bottom: 40px;
+}
+
+.content-block h2 {
+    font-family: 'MedievalSharp', cursive;
+    color: var(--uo-red);
+    border-bottom: 1px double var(--uo-gold);
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Release List Styling */
+.release-list {
+    list-style: none;
+    padding: 0;
+}
+
+.release-item {
+    background: rgba(255, 255, 255, 0.4);
+    border-left: 5px solid var(--uo-gold);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: background 0.2s;
+}
+
+.release-item:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.release-item h3 {
+    margin: 0 0 10px 0;
+    font-family: 'MedievalSharp', cursive;
+    color: var(--uo-ink);
+}
+
+.release-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.tag {
+    display: inline-block;
+    background: #4a3728;
+    color: var(--uo-gold);
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-right: 5px;
+    text-transform: uppercase;
+}
+
 /* Footer */
 footer {
     margin-top: 60px;
     text-align: center;
     font-size: 0.85rem;
     color: #5d4037;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 20px;
 }
 
@@ -181,7 +240,18 @@ footer {
 
 /* Mobile Adjustments */
 @media (max-width: 600px) {
-    .parchment-surface { padding: 15px; }
-    .uo-title { font-size: 2.5rem; }
-    .gump-btn { width: 100%; text-align: center; }
+    .parchment-surface {
+        padding: 15px;
+    }
+
+    h1.uo-title {
+        font-size: 3rem;
+        font-family: 'MedievalSharp';
+        display: none;
+    }
+
+    .gump-btn {
+        width: 100%;
+        text-align: center;
+    }
 }
