@@ -1,1 +1,6 @@
-title: UltimaWorks Studio\ndescription: UO Art Releases, Python Scripts, and Server Scripts by JBob.\ntheme: jekyll-theme-cayman\nremote_theme: pages-themes/cayman@v0.2.0\nplugins:\n  - jekyll-remote-theme
+title: UltimaWorks Studio 
+description: UO Art Releases, Python Scripts, and Server Scripts by JBob. 
+theme: jekyll-theme-cayman 
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:   
+  - jekyll-remote-theme
