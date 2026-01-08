@@ -97,11 +97,18 @@
         var lists = document.querySelectorAll('.release-list');
         if (!lists || !lists.length) return;
 
-        // Try to fetch assets/releases.json; if missing, do nothing
-        fetch('assets/releases.json').then(function(res){
-            if (!res.ok) throw new Error('HTTP ' + res.status);
-            return res.json();
-        }).then(function(data){
+        // Prefer an inline JS-provided object for file:// usage, otherwise fetch JSON over HTTP
+        var loadReleases = function(){
+            if (window && window.__RELEASES) {
+                return Promise.resolve(window.__RELEASES);
+            }
+            return fetch('assets/releases.json').then(function(res){
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                return res.json();
+            });
+        };
+
+        loadReleases().then(function(data){
             lists.forEach(function(listEl){
                 // Allow per-list override via data-group attribute
                 var group = listEl.dataset && listEl.dataset.group ? listEl.dataset.group : pathKey;
@@ -110,7 +117,7 @@
             });
         }).catch(function(err){
             // Quietly fail; keep any static HTML already in place
-            console.warn('Could not load assets/releases.json — release lists unchanged.', err);
+            console.warn('Could not load assets/releases.json or inline releases — release lists unchanged.', err);
         });
 
         // Expose a helper to refresh lists programmatically
